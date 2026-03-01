@@ -18,7 +18,7 @@ function SwitcherInner() {
         Version
       </span>
       <div className="flex items-center gap-1 rounded-full bg-black/30 backdrop-blur-xl border border-white/10 px-2 py-1.5 shadow-2xl">
-        {[1, 2, 3, 4, 5].map((v) => (
+        {[1, 2, 3, 4, 5, 6, 7].map((v) => (
           <button
             key={v}
             onClick={() => switchVersion(v)}
