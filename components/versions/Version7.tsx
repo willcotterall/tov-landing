@@ -79,7 +79,7 @@ function Hero() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-[#080b14]/70" />
+        <div className="absolute inset-0 bg-[#0a0a0a]/70" />
       </div>
 
       {/* Pinned content */}
@@ -89,21 +89,21 @@ function Hero() {
       >
         <h1
           ref={tovTextRef}
-          className="font-source-serif text-[150px] md:text-[250px] font-bold text-[#f5f0e6] leading-none select-none will-change-transform"
+          className="font-instrument text-[150px] md:text-[250px] font-bold text-[#f0ece4] leading-none select-none will-change-transform"
         >
           TOV
         </h1>
 
         <p
           ref={subtitleRef}
-          className="absolute font-source-serif text-2xl md:text-4xl text-[#f5f0e6] tracking-wide opacity-0"
+          className="absolute font-instrument text-2xl md:text-4xl text-[#f0ece4] tracking-wide opacity-0"
         >
           The Open Version
         </p>
 
         <p
           ref={taglineRef}
-          className="absolute mt-24 font-inter text-lg md:text-2xl text-[#818cf8] tracking-widest uppercase opacity-0"
+          className="absolute mt-24 font-dm-sans text-lg md:text-2xl text-[#d4af5a] tracking-widest uppercase opacity-0"
         >
           Scripture, unchained.
         </p>
@@ -177,7 +177,7 @@ function ProblemStatement() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-[#080b14] py-40 px-6 flex flex-col items-center justify-center"
+      className="relative bg-[#0a0a0a] py-40 px-6 flex flex-col items-center justify-center"
     >
       <div className="max-w-4xl mx-auto text-center space-y-4 md:space-y-6">
         {problemLines.map((line, i) => (
@@ -186,7 +186,7 @@ function ProblemStatement() {
             ref={(el) => {
               linesRef.current[i] = el;
             }}
-            className="font-source-serif text-2xl md:text-4xl text-[#f5f0e6] leading-relaxed"
+            className="font-instrument text-2xl md:text-4xl text-[#f0ece4] leading-relaxed"
           >
             {line}
           </p>
@@ -194,7 +194,7 @@ function ProblemStatement() {
 
         <p
           ref={ctaRef}
-          className="font-source-serif text-3xl md:text-5xl text-[#818cf8] mt-16 pt-8 font-semibold"
+          className="font-instrument text-3xl md:text-5xl text-[#d4af5a] mt-16 pt-8 font-semibold"
         >
           We&rsquo;re changing that.
         </p>
@@ -266,7 +266,7 @@ function Stats() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-[#0d1117] py-40 px-6 overflow-hidden"
+      className="relative bg-[#111111] py-40 px-6 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 text-center">
@@ -278,10 +278,10 @@ function Stats() {
               }}
               className="flex flex-col items-center"
             >
-              <span className="font-source-serif text-7xl md:text-9xl text-[#f5f0e6] font-bold leading-none">
+              <span className="font-instrument text-7xl md:text-9xl text-[#f0ece4] font-bold leading-none">
                 {stat.value}
               </span>
-              <span className="font-inter text-sm uppercase tracking-widest text-[#f5f0e6]/40 mt-6">
+              <span className="font-dm-sans text-sm uppercase tracking-widest text-[#f0ece4]/40 mt-6">
                 {stat.label}
               </span>
             </div>
@@ -293,7 +293,7 @@ function Stats() {
       <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-white/5">
         <div
           ref={progressRef}
-          className="h-full bg-[#6366f1] origin-left"
+          className="h-full bg-[#c9a84c] origin-left"
           style={{ transform: "scaleX(0)" }}
         />
       </div>
@@ -309,8 +309,8 @@ const comparisonCards = [
   {
     name: "TOV",
     accent: true,
-    borderColor: "border-[#6366f1]",
-    bgColor: "bg-[#6366f1]",
+    borderColor: "border-[#c9a84c]",
+    bgColor: "bg-[#c9a84c]",
     items: [
       "Fully open-source",
       "No limits on usage",
@@ -323,7 +323,7 @@ const comparisonCards = [
     name: "ESV",
     accent: false,
     borderColor: "border-red-500/30",
-    bgColor: "bg-[#111827]",
+    bgColor: "bg-[#161616]",
     items: [
       "Crossway copyright",
       "500 verse limit per request",
@@ -335,7 +335,7 @@ const comparisonCards = [
     name: "NIV",
     accent: false,
     borderColor: "border-red-500/30",
-    bgColor: "bg-[#111827]",
+    bgColor: "bg-[#161616]",
     items: [
       "Zondervan copyright",
       "No public API",
@@ -347,7 +347,7 @@ const comparisonCards = [
     name: "NASB",
     accent: false,
     borderColor: "border-red-500/30",
-    bgColor: "bg-[#111827]",
+    bgColor: "bg-[#161616]",
     items: [
       "Lockman Foundation",
       "No public API",
@@ -359,7 +359,7 @@ const comparisonCards = [
     name: "KJV",
     accent: false,
     borderColor: "border-amber-500/30",
-    bgColor: "bg-[#111827]",
+    bgColor: "bg-[#161616]",
     items: [
       "Public domain",
       "No modern scholarly apparatus",
@@ -401,11 +401,11 @@ function HorizontalScroll() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-[#080b14] overflow-hidden"
+      className="relative bg-[#0a0a0a] overflow-hidden"
     >
       {/* Section title */}
       <div className="absolute top-8 left-0 right-0 z-10 text-center pointer-events-none">
-        <p className="font-inter text-sm uppercase tracking-widest text-[#f5f0e6]/30">
+        <p className="font-dm-sans text-sm uppercase tracking-widest text-[#f0ece4]/30">
           How TOV compares
         </p>
       </div>
@@ -421,13 +421,13 @@ function HorizontalScroll() {
               flex-shrink-0 w-[80vw] md:w-[400px] h-[70vh] max-h-[500px] rounded-2xl
               border ${card.borderColor} ${card.bgColor}
               p-8 md:p-10 flex flex-col justify-between
-              ${card.accent ? "text-white" : "text-[#f5f0e6]"}
+              ${card.accent ? "text-white" : "text-[#f0ece4]"}
             `}
           >
             <div>
               <h3
-                className={`font-source-serif text-5xl md:text-6xl font-bold mb-6 ${
-                  card.accent ? "text-white" : "text-[#f5f0e6]"
+                className={`font-instrument text-5xl md:text-6xl font-bold mb-6 ${
+                  card.accent ? "text-white" : "text-[#f0ece4]"
                 }`}
               >
                 {card.name}
@@ -445,8 +445,8 @@ function HorizontalScroll() {
                       }`}
                     />
                     <span
-                      className={`font-inter ${
-                        card.accent ? "text-white/90" : "text-[#f5f0e6]/60"
+                      className={`font-dm-sans ${
+                        card.accent ? "text-white/90" : "text-[#f0ece4]/60"
                       }`}
                     >
                       {item}
@@ -458,7 +458,7 @@ function HorizontalScroll() {
 
             {card.accent && (
               <div className="mt-8 pt-6 border-t border-white/20">
-                <p className="font-inter text-sm text-white/70 uppercase tracking-widest">
+                <p className="font-dm-sans text-sm text-white/70 uppercase tracking-widest">
                   Free &amp; Open Source
                 </p>
               </div>
@@ -541,28 +541,28 @@ function ApiShowcase() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-[#0d1117] py-40 px-6"
+      className="relative bg-[#111111] py-40 px-6"
     >
       <div className="max-w-3xl mx-auto">
         <h2
           ref={headingRef}
-          className="font-source-serif text-3xl md:text-5xl text-[#f5f0e6] text-center mb-16"
+          className="font-instrument text-3xl md:text-5xl text-[#f0ece4] text-center mb-16"
         >
           For developers who build
           <br />
-          <span className="text-[#818cf8]">with purpose.</span>
+          <span className="text-[#d4af5a]">with purpose.</span>
         </h2>
 
-        <div className="relative rounded-xl border border-[#f5f0e6]/10 bg-[#080b14] p-6 md:p-8 overflow-hidden">
+        <div className="relative rounded-xl border border-[#f0ece4]/10 bg-[#0a0a0a] p-6 md:p-8 overflow-hidden">
           {/* Glow effect */}
-          <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#6366f1]/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#c9a84c]/10 rounded-full blur-3xl pointer-events-none" />
 
           {/* Top bar */}
-          <div className="flex items-center gap-2 mb-6 pb-4 border-b border-[#f5f0e6]/5">
+          <div className="flex items-center gap-2 mb-6 pb-4 border-b border-[#f0ece4]/5">
             <div className="w-3 h-3 rounded-full bg-red-500/60" />
             <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
             <div className="w-3 h-3 rounded-full bg-green-500/60" />
-            <span className="ml-4 font-jetbrains text-xs text-[#f5f0e6]/30">
+            <span className="ml-4 font-jetbrains text-xs text-[#f0ece4]/30">
               api.tov.bible
             </span>
           </div>
@@ -582,10 +582,10 @@ function ApiShowcase() {
                   <span
                     className={
                       i === 0
-                        ? "text-[#818cf8]"
+                        ? "text-[#d4af5a]"
                         : line.includes('"')
-                        ? "text-[#f5f0e6]/80"
-                        : "text-[#f5f0e6]/50"
+                        ? "text-[#f0ece4]/80"
+                        : "text-[#f0ece4]/50"
                     }
                   >
                     {line}
@@ -596,7 +596,7 @@ function ApiShowcase() {
           </div>
         </div>
 
-        <p className="text-center font-inter text-sm text-[#f5f0e6]/30 mt-8 tracking-wide">
+        <p className="text-center font-dm-sans text-sm text-[#f0ece4]/30 mt-8 tracking-wide">
           RESTful API &middot; Full manuscript data &middot; Zero rate limits
         </p>
       </div>
@@ -707,14 +707,14 @@ function Philosophy() {
           className="object-cover"
         />
       </div>
-      <div className="absolute inset-0 bg-[#080b14]/80" />
+      <div className="absolute inset-0 bg-[#0a0a0a]/80" />
 
       <div className="relative max-w-4xl mx-auto text-center z-10">
         <div ref={textBlockRef}>
-          <p className="font-inter text-sm uppercase tracking-widest text-[#818cf8] mb-8">
+          <p className="font-dm-sans text-sm uppercase tracking-widest text-[#d4af5a] mb-8">
             Our Philosophy
           </p>
-          <p className="font-source-serif text-xl md:text-2xl text-[#ede8de] leading-relaxed mb-6">
+          <p className="font-instrument text-xl md:text-2xl text-[#e8e4dd] leading-relaxed mb-6">
             Built on a commitment to the inerrancy of the original autographs.
             A balanced approach: word-level accuracy with natural English
             readability. Every editorial decision tracked and transparent.
@@ -723,7 +723,7 @@ function Philosophy() {
 
         <p
           ref={quoteRef}
-          className="font-source-serif text-4xl md:text-6xl lg:text-7xl text-[#f5f0e6] italic mt-16 mb-12 leading-tight"
+          className="font-instrument text-4xl md:text-6xl lg:text-7xl text-[#f0ece4] italic mt-16 mb-12 leading-tight"
         >
           &ldquo;Abolish the
           <br />
@@ -732,7 +732,7 @@ function Philosophy() {
 
         <p
           ref={creditsRef}
-          className="font-inter text-sm text-[#f5f0e6]/40 tracking-wide"
+          className="font-dm-sans text-sm text-[#f0ece4]/40 tracking-wide"
         >
           Scholars from Princeton Theological Seminary and Ligonier Ministries
         </p>
@@ -786,29 +786,29 @@ function Vision() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative min-h-[200vh] bg-[#080b14]">
+    <section ref={sectionRef} className="relative min-h-[200vh] bg-[#0a0a0a]">
       <div
         ref={cardRef}
         className="h-screen w-full flex items-center justify-center will-change-transform"
       >
-        <div className="relative w-full h-full bg-[#111827] border border-[#6366f1]/20 overflow-hidden flex items-center justify-center">
+        <div className="relative w-full h-full bg-[#161616] border border-[#c9a84c]/20 overflow-hidden flex items-center justify-center">
           {/* Subtle gradient orbs */}
-          <div className="absolute top-1/4 -left-20 w-96 h-96 bg-[#6366f1]/5 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-[#818cf8]/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-1/4 -left-20 w-96 h-96 bg-[#c9a84c]/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-[#d4af5a]/5 rounded-full blur-3xl pointer-events-none" />
 
           <div
             ref={contentRef}
             className="relative max-w-3xl mx-auto text-center px-8 md:px-12 opacity-0"
           >
-            <p className="font-inter text-sm uppercase tracking-widest text-[#6366f1] mb-8">
+            <p className="font-dm-sans text-sm uppercase tracking-widest text-[#c9a84c] mb-8">
               The Vision
             </p>
-            <h2 className="font-source-serif text-3xl md:text-5xl lg:text-6xl text-[#f5f0e6] leading-tight mb-8">
+            <h2 className="font-instrument text-3xl md:text-5xl lg:text-6xl text-[#f0ece4] leading-tight mb-8">
               More than a translation.
               <br />
-              <span className="text-[#818cf8]">A living data structure.</span>
+              <span className="text-[#d4af5a]">A living data structure.</span>
             </h2>
-            <p className="font-source-serif text-lg md:text-xl text-[#ede8de]/70 leading-relaxed mb-10">
+            <p className="font-instrument text-lg md:text-xl text-[#e8e4dd]/70 leading-relaxed mb-10">
               Manuscript evidence. Textual variants. Cross-language mappings.
               Continuously improving. The best repository of human knowledge
               about God&rsquo;s Word.
@@ -822,10 +822,10 @@ function Vision() {
                 "Evolving",
               ].map((label) => (
                 <div key={label} className="text-center">
-                  <div className="w-10 h-10 mx-auto rounded-lg bg-[#6366f1]/10 border border-[#6366f1]/20 flex items-center justify-center mb-3">
-                    <div className="w-2 h-2 rounded-full bg-[#6366f1]" />
+                  <div className="w-10 h-10 mx-auto rounded-lg bg-[#c9a84c]/10 border border-[#c9a84c]/20 flex items-center justify-center mb-3">
+                    <div className="w-2 h-2 rounded-full bg-[#c9a84c]" />
                   </div>
-                  <span className="font-inter text-xs uppercase tracking-widest text-[#f5f0e6]/40">
+                  <span className="font-dm-sans text-xs uppercase tracking-widest text-[#f0ece4]/40">
                     {label}
                   </span>
                 </div>
@@ -952,13 +952,13 @@ function CtaFooter() {
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-[#080b14]/85" />
+          <div className="absolute inset-0 bg-[#0a0a0a]/85" />
         </div>
 
         <div className="relative z-10 text-center max-w-3xl mx-auto">
           <h2
             ref={headingRef}
-            className="font-source-serif text-5xl md:text-7xl lg:text-8xl text-[#f5f0e6] leading-tight mb-12"
+            className="font-instrument text-5xl md:text-7xl lg:text-8xl text-[#f0ece4] leading-tight mb-12"
           >
             The Word.
             <br />
@@ -970,13 +970,13 @@ function CtaFooter() {
               <input
                 type="email"
                 placeholder="you@email.com"
-                className="w-full sm:flex-1 bg-[#f5f0e6]/5 border border-[#f5f0e6]/10 rounded-lg px-5 py-3.5 font-inter text-sm text-[#f5f0e6] placeholder:text-[#f5f0e6]/30 focus:outline-none focus:border-[#6366f1]/50 transition-colors"
+                className="w-full sm:flex-1 bg-[#f0ece4]/5 border border-[#f0ece4]/10 rounded-lg px-5 py-3.5 font-dm-sans text-sm text-[#f0ece4] placeholder:text-[#f0ece4]/30 focus:outline-none focus:border-[#c9a84c]/50 transition-colors"
               />
-              <button className="w-full sm:w-auto bg-[#6366f1] hover:bg-[#818cf8] text-white font-inter text-sm font-medium px-8 py-3.5 rounded-lg transition-colors whitespace-nowrap">
+              <button className="w-full sm:w-auto bg-[#c9a84c] hover:bg-[#d4af5a] text-white font-dm-sans text-sm font-medium px-8 py-3.5 rounded-lg transition-colors whitespace-nowrap">
                 Get Notified
               </button>
             </div>
-            <p className="font-inter text-xs text-[#f5f0e6]/20 mt-4">
+            <p className="font-dm-sans text-xs text-[#f0ece4]/20 mt-4">
               Join the movement. Be first to know when TOV launches.
             </p>
           </div>
@@ -985,14 +985,14 @@ function CtaFooter() {
             <a
               ref={leftLinkRef}
               href="#"
-              className="font-inter text-sm text-[#818cf8] hover:text-[#f5f0e6] transition-colors underline underline-offset-4 decoration-[#818cf8]/30"
+              className="font-dm-sans text-sm text-[#d4af5a] hover:text-[#f0ece4] transition-colors underline underline-offset-4 decoration-[#d4af5a]/30"
             >
               Preview Reader
             </a>
             <a
               ref={rightLinkRef}
               href="#"
-              className="font-inter text-sm text-[#818cf8] hover:text-[#f5f0e6] transition-colors underline underline-offset-4 decoration-[#818cf8]/30"
+              className="font-dm-sans text-sm text-[#d4af5a] hover:text-[#f0ece4] transition-colors underline underline-offset-4 decoration-[#d4af5a]/30"
             >
               Developer Docs
             </a>
@@ -1001,24 +1001,24 @@ function CtaFooter() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#080b14] border-t border-[#f5f0e6]/5 py-16 px-6">
+      <footer className="bg-[#0a0a0a] border-t border-[#f0ece4]/5 py-16 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <nav className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mb-10">
             {footerLinks.map((link) => (
               <a
                 key={link}
                 href="#"
-                className="font-inter text-sm text-[#f5f0e6]/40 hover:text-[#f5f0e6] transition-colors"
+                className="font-dm-sans text-sm text-[#f0ece4]/40 hover:text-[#f0ece4] transition-colors"
               >
                 {link}
               </a>
             ))}
           </nav>
 
-          <p className="font-source-serif text-lg text-[#f5f0e6]/60 mb-2">
+          <p className="font-instrument text-lg text-[#f0ece4]/60 mb-2">
             TOV &mdash; The Open Version
           </p>
-          <p className="font-inter text-xs text-[#f5f0e6]/20">
+          <p className="font-dm-sans text-xs text-[#f0ece4]/20">
             Free to use. Free to share.
           </p>
         </div>
@@ -1033,7 +1033,7 @@ function CtaFooter() {
 
 export default function Version7() {
   return (
-    <main className="bg-[#080b14]">
+    <main className="bg-[#0a0a0a]">
       <Hero />
       <ProblemStatement />
       <Stats />
