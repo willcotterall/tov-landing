@@ -8,9 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        inter: ["var(--font-inter)", "sans-serif"],
+        playfair: ["var(--font-playfair)", "serif"],
+        jetbrains: ["var(--font-jetbrains)", "monospace"],
+        "source-serif": ["var(--font-source-serif)", "serif"],
+        "dm-sans": ["var(--font-dm-sans)", "sans-serif"],
+        instrument: ["var(--font-instrument)", "serif"],
       },
     },
   },
